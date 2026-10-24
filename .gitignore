@@ -8,3 +8,4 @@ __pycache__/
 *.jsonl
 report.html
 tmp-*.html
+*.html

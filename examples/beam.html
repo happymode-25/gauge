@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>beam.gauge</title>
+<style>
+:root { color-scheme: dark; }
+body { margin:0; background:#1a1b26; color:#c0caf5;
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif; }
+header { padding:28px 32px 8px; }
+h1 { margin:0 0 6px; font-size:22px; }
+.sub { color:#565f89; font-size:14px; }
+main { padding:16px 32px 40px; }
+.cards { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0; }
+.card { background:#1f2335; border:1px solid #3b4261; border-radius:8px; padding:10px 14px; min-width:110px; }
+.card .n { font-size:20px; font-weight:600; }
+.card .l { color:#565f89; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+h2 { font-size:15px; color:#565f89; text-transform:uppercase; letter-spacing:.05em; margin:26px 0 8px; }
+table { border-collapse:collapse; width:100%; max-width:820px; }
+th, td { text-align:left; padding:7px 10px; border-bottom:1px solid #292e42; font-size:14px; }
+th { color:#565f89; font-weight:600; font-size:12px; text-transform:uppercase; }
+td.num, th.num { text-align:right; font-variant-numeric:tabular-nums; }
+.findings { list-style:none; padding:0; }
+.findings li { background:#1f2335; border:1px solid #3b4261; border-radius:8px; padding:10px 14px; margin:8px 0; font-size:14px; }
+.sev { color:#f7768e; font-weight:700; font-size:11px; text-transform:uppercase; margin-right:8px; }
+.ok { color:#9ece6a; }
+.warn { color:#e0af68; }
+.empty { color:#565f89; }
+</style></head><body>
+<header>
+  <h1>beam.gauge</h1>
+  <div class="sub">10 queries</div>
+</header>
+<main>
+  <div class="cards"><div class='card'><div class='n'>6</div><div class='l'>conversions</div></div><div class='card'><div class='n'>4</div><div class='l'>checks</div></div><div class='card'><div class='n'>2</div><div class='l'>units</div></div></div>
+  <p class='ok'>6 conversions and 4 checks resolved.</p>
+  <h2>Results</h2>
+  <table><thead><tr><th>kind</th><th>declaration</th><th>result</th><th>dimension</th></tr></thead><tbody><tr><td>convert</td><td>convert 5 km to m</td><td class='num'>5000</td><td>length</td></tr><tr><td>convert</td><td>convert 100 km/h to m/s</td><td class='num'>27.7777777778</td><td>length/time</td></tr><tr><td>convert</td><td>convert 1 mi to km</td><td class='num'>1.609344</td><td>length</td></tr><tr><td>convert</td><td>convert 1 L to m^3</td><td class='num'>0.001</td><td>length^3</td></tr><tr><td>convert</td><td>convert 1 furlong to m</td><td class='num'>201.168</td><td>length</td></tr><tr><td>convert</td><td>convert 1 fortnight to day</td><td class='num'>14</td><td>time</td></tr><tr><td>check</td><td>check 1 N = 1 kg*m/s^2</td><td><span class='ok'>holds</span></td><td>length*mass/time^2</td></tr><tr><td>check</td><td>check 1 J = 1 N*m</td><td><span class='ok'>holds</span></td><td>length^2*mass/time^2</td></tr><tr><td>check</td><td>check 1 W = 1 J/s</td><td><span class='ok'>holds</span></td><td>length^2*mass/time^3</td></tr><tr><td>check</td><td>check 1 Pa = 1 N/m^2</td><td><span class='ok'>holds</span></td><td>mass/length/time^2</td></tr></tbody></table>
+  <h2>Units</h2><table><thead><tr><th>unit</th><th class='num'>scale</th><th>expression</th></tr></thead><tbody><tr><td>furlong</td><td class='num'>201.168</td><td>m</td></tr><tr><td>fortnight</td><td class='num'>14</td><td>day</td></tr></tbody></table>
+  <p class='ok'>Every unit is defined and every dimension agrees.</p>
+</main></body></html>
